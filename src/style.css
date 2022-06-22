@@ -1,0 +1,232 @@
+body {
+  /* width: 100%;
+  height: 100%; */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav-header {
+  display: grid;
+}
+.nav-header h3 {
+  /* position: absolute;
+  top: 0;
+  left: 2.8rem; */
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 4.5px 5.5px rgb(3, 1, 63);
+}
+.toggle-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.5rem;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.link-btn {
+  border: none;
+  background: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  /* margin: 1.5rem; */
+}
+.nav-links {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.nav-links li {
+  list-style: none;
+}
+.signIn-btn {
+  display: block;
+  border-color: transparent;
+  border-style: solid;
+  border-radius: 3px;
+  background: black;
+  color: white;
+  width: 3.8rem;
+  height: 1.7rem;
+  margin-left: 12rem;
+  /* position: absolute;
+  top: 2rem;
+  right: 2rem; */
+}
+.hero {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    60deg,
+    green,
+    rgb(255, 213, 0),
+    rgb(252, 165, 180)
+  );
+  z-index: -1;
+}
+.submenu {
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+
+/* @media screen and (min-width:801px) and (max-width:1030px){
+  .hero-center
+} */
+
+@media screen and (min-width: 501px) {
+  .hero-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-info {
+    /* width: 40%;
+    height: 100%; */
+    margin: 5.8rem 3rem;
+  }
+  .hero-info h1 {
+    font-size: 70px;
+  }
+  .hero-info p {
+    font-size: 20px;
+    color: rgb(67, 67, 67);
+  }
+  .hero-img {
+    display: block;
+    padding: 2rem;
+  }
+}
+.start-btn {
+  background: black;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 4.8rem;
+  height: 1.7rem;
+}
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 46, 46, 0.427);
+}
+.show-sidebar {
+  display: flex;
+}
+.sidebar-container {
+  position: relative;
+  top: 3.33%;
+  left: 2.43%;
+  background-color: white;
+  width: 95%;
+  height: 93%;
+  border-radius: 3px;
+}
+.sidebar-header {
+  position: relative;
+  top: 3%;
+  left: 91%;
+  color: rgba(0, 0, 0, 0.703);
+  background: none;
+  border: transparent;
+}
+.sidebar-links {
+  text-transform: capitalize;
+  margin-left: 3rem;
+  color: rgba(0, 0, 0, 0.703);
+}
+.sidebar-sublinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.sidebar-sublinks a {
+  display: flex;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.703);
+}
+.sidebar-sublinks span {
+  margin-right: 1rem;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(255, 255, 255);
+  /* width: 14%;
+  height: 20%; */
+  border-radius: 3px;
+  transform: translateX(-50%);
+}
+.submenu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-bottom: 12px solid rgb(255, 255, 255);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.show-submenu {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-header {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-header h3 {
+    /* left: 1.5rem; */
+    margin-left: 2rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .signIn-btn {
+    display: none;
+  }
+  .toggle-btn {
+    display: block;
+    position: absolute;
+    top: 0.45rem;
+  }
+  .hero-info {
+    margin: 8rem 1rem;
+  }
+  .hero-info h1 {
+    font-size: 50px;
+  }
+  .hero-info p {
+    font-size: 20px;
+    color: rgb(67, 67, 67);
+  }
+  .hero-img {
+    display: none;
+  }
+  .show-submenu {
+    display: none;
+  }
+}
